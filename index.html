@@ -1,8 +1,37 @@
 <html>
 	<head>
 		<title> cats </title>
+		<style>
+			body {
+				background-color: black;
+				color: white;
+			}
+			.catpic {
+				width: 70%;
+			}
+		</style>
 	</head>
 	<body>
-		<h1> cats </h1>
+	<h1 id="title"> cats </h1>
+
+	<img id="catpic" class="catpic" src="catelyn/1.jpg" />
+
+	<script>
+		/* determine cat */
+		var domain = window.location.hostname;
+		var cat = "";
+		if (domain.endsWith('lysa.cat'))
+			cat = 'lysa';
+		if (domain.endsWith('catelyn.cat'))
+			cat = 'catelyn';
+
+		if (cat != "'") {
+			var title = document.getElementById('title');
+			var catpic = document.getElementById('catpic');
+			document.title  = cat;
+			title.innerText = cat;
+			catpic.src = cat + '/1.jpg';
+		}
+	</script>
 	</body>
 </html>
