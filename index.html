@@ -43,12 +43,15 @@
 		if (domain.endsWith('catelyn.cat'))
 			cat = 'catelyn';
 
-		if (cat != "'") {
+		if (cat != "") {
 			var title = document.getElementById('title');
 			var catpic = document.getElementById('catpic');
 			document.title  = cat;
 			title.innerText = cat;
-			catpic.src = cat + '/1.jpg';
+			if (cat == "catelyn")
+				catpic.src = cat + '/2.jpg';
+			else
+				catpic.src = cat + '/1.jpg';
 		}
 	</script>
 	</body>
